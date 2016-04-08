@@ -1,5 +1,16 @@
 # Display Window Size Bookmarklet
 
-Chrome used to show the size of the `innerWindow` as it was being resized when the Developer Tools were open. I personally relied on this feature all the time. With the current update to Chrome 49, this feature is now gone. Here is a bookmarklet to give you this functionality back.
+Chrome used to show the size of the `innerWindow` as it was being resized when the Developer Tools were open. I personally relied on this feature all the time. With the current update to Chrome 49, this feature is now gone. This is a bookmarklet to give you this functionality back.
 
-<a style="display: inline-block; padding: 10px 20px; margin-bottom: 10px; color: #fff; background:#3D79D0; border-radius: 3px;" href="javascript:(function(){var vals=document.createElement('div'),windowWidth=window.innerWidth,windowHeight=window.innerHeight,doing;function fadeOut(){clearTimeout(doing);doing=setTimeout(function(){vals.style.opacity=0;},1000);}window.addEventListener('resize',function(){windowWidth=window.innerWidth;windowHeight=window.innerHeight;vals.style.opacity=1;vals.innerHTML=windowWidth+'&nbsp;x&nbsp;'+windowHeight;fadeOut();});vals.className='dj-dsiplay-window-size';vals.style.position='fixed';vals.style.zIndex='100000';vals.style.top='0';vals.style.right='0';vals.style.padding='1em';vals.style.color='#fff';vals.style.font='14px/1em sans-serif';vals.style.backgroundColor='rgba(0,0,0,0.75)';vals.style.borderRadius='0 0 0 0.5em';vals.style.transition='opacity 200ms';vals.innerHTML=windowWidth+'&nbsp;x&nbsp;'+windowHeight;if(!document.querySelector('.dj-dsiplay-window-size'))document.body.appendChild(vals);fadeOut();})();">DsiplayWindowSize</a> &nbsp; Drag link to your Bookmark Bar.
+## Instalation
+
+1. Copy the code from the [js file](display-window-size.js).
+1. Create a new bookmark in your Bookmark Bar.
+1. Right-click on the new bookmark and click Edit.
+1. Rename the bookmark 'DsiplayWindowSize'.
+1. Paste js code into the URL.
+1. Click Save.
+
+## Usage
+
+While on the page in question, click the Bookmarklet. The current window size will appear at the top-right for a few seconds, then fade out. As you resize the browser, it will re-appear, displaying the currently changing size, then fade out again. This functionality will remain until the page is refreshed.

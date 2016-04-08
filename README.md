@@ -2,7 +2,7 @@
 
 Chrome used to show the size of the `innerWindow` as it was being resized when the Developer Tools were open. I personally relied on this feature all the time. With the current update to Chrome 49, this feature is now gone. This is a bookmarklet to give you this functionality back.
 
-## Instalation
+## Installation
 
 ### Chrome (Mac)
 

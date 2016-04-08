@@ -17,6 +17,7 @@ javascript:(
       vals.innerHTML = windowWidth + ' x ' + windowHeight;
       fadeOut();
     });
+
     vals.className = 'dj-dsiplay-window-size';
     vals.style.position = 'fixed';
     vals.style.zIndex = '100000';

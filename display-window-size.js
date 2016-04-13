@@ -29,6 +29,7 @@ javascript:(
     vals.style.backgroundColor = 'rgba(0,0,0,0.75)';
     vals.style.borderRadius = '0 0 0 0.5em';
     vals.style.transition = 'opacity 200ms';
+    vals.style.pointerEvents = 'none';
     vals.innerHTML = windowWidth + ' x ' + windowHeight;
 
     if (!document.querySelector('.dj-dsiplay-window-size')) document.body.appendChild(vals);
